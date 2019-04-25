@@ -1,0 +1,731 @@
+body {
+    background-color: rgb(167, 35, 0)
+}
+  
+table {
+    width: 632px;
+    height: 632px;
+    background-color: rgb(158, 0, 0);
+}
+
+td {
+    margin: 0%;
+}
+
+.main {
+    color: aqua;
+    font-size: 40px;
+    background-color: rgba(50, 50, 50, 0.7);
+    border-style: solid blue;
+    border-width: 3px;
+    border-radius: 20px;
+    border-color: blue;
+    text-align: center;
+}
+
+.moveable {
+    background-color: green !important;
+    border-color: aqua !important;
+}
+
+.moveable2 {
+    border-color: green !important;
+    background-color: aqua !important;
+}
+
+.toCenter {
+    text-align: center;
+}
+
+.clicked {
+    background-color: aqua;
+}
+
+.brook {
+    background-image: url('../images/brook.png');
+}
+
+.bknight {
+    background-image: url('../images/bknight.png');
+}
+
+.bbishop {
+    background-image: url('../images/bbishop.png');
+}
+
+.bqueen {
+    background-image: url('../images/bqueen.png');
+}
+
+.bking {
+    background-image: url('../images/bking.png');
+}
+
+.bpawn {
+    background-image: url('../images/bpawn.png');
+}
+
+
+.wrook {
+    background-image: url('../images/wrook.png');
+}
+
+.wknight {
+    background-image: url('../images/wknight.png');
+}
+
+.wbishop {
+    background-image: url('../images/wbishop.png');
+}
+
+.wqueen {
+    background-image: url('../images/wqueen.png');
+}
+
+.wking {
+    background-image: url('../images/wking.png');
+}
+
+.wpawn {
+    background-image: url('../images/wpawn.png');
+}
+  
+#ba11 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba12 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba13 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba14 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba15 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba16 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba17 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba18 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba21 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba22 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba23 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba24 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba25 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba26 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba27 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba28 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba31 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba32 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba33 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba34 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba35 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba36 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba37 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba38 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba41 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba42 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba43 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba44 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba45 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba46 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba47 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba48 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+
+#ba51 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba52 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba53 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba54 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba55 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba56 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba57 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba58 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+
+#ba61 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba62 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba63 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba64 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba65 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba66 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba67 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba68 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+
+#ba71 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba72 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba73 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba74 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba75 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba76 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba77 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba78 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+
+#ba81 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba82 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba83 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba84 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba85 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba86 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba87 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+  
+#ba88 {
+    background-color: #444;
+    border: 3px solid #aaa;
+}
+
+#wa11 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa12 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa13 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa14 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa15 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa16 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa17 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa18 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa21 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa22 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa23 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa24 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa25 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa26 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa27 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa28 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa31 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa32 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa33 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa34 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa35 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa36 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa37 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa38 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa41 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa42 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa43 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa44 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa45 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa46 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa47 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa48 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+
+#wa51 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa52 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa53 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa54 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa55 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa56 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa57 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa58 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+
+#wa61 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa62 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa63 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa64 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa65 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa66 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa67 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa68 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+
+#wa71 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa72 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa73 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa74 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa75 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa76 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa77 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa78 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+
+#wa81 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa82 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa83 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa84 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa85 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa86 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa87 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
+  
+#wa88 {
+    background-color: #aaa;
+    border: 3px solid #444;
+}
