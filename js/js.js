@@ -15,21 +15,21 @@ $(document).ready(function() {
         $(x).map(function() {
           pawn_id.push(this.id);
         });
-        if(x == '.wpawn'){
+        if(x == '.wpawn' && $(x).length > 0){
           times1 = $(".wpawn").length;
           while(times1 > 0){
             move(x, pawn_id);
             times1 -= 1;
           }
         }
-        else if(x != '.wking' && x != '.wqueen') {
+        else if(x != '.wking' && x != '.wqueen' && $(x).length > 0) {
           times1 = $(x).length;
           while(times1 > 0){
             move(x, pawn_id);
             times1 -= 1;
           }
         }
-        else {
+        else if($(x).length > 0) {
           move(x, pawn_id)
         }
       }
@@ -42,28 +42,1704 @@ $(document).ready(function() {
         $(x).map(function() {
           pawn_id.push(this.id);
         });
-        if(x == '.bpawn'){
+        if(x == '.bpawn' && $(x).length > 0){
           times1 = $(".bpawn").length;
           while(times1 > 0){
             move(x, pawn_id);
             times1 -= 1;
           }
         }
-        else if(x != '.bking' && x != '.bqueen') {
+        else if(x != '.bking' && x != '.bqueen' && $(x).length > 0) {
           times1 = $(x).length;
           while(times1 > 0){
             move(x, pawn_id);
             times1 -= 1;
           }
         }
-        else {
+        else if($(x).length > 0) {
           move(x, pawn_id)
         }
       }
     }
     function move(x, pawn_id) {
       times = pawn_id.length - 1;
-      if(x == '.bknight') {
+      if(x == '.bking') {
+        x = pawn_id[times];
+        pawn_id.pop();
+        xcopy = x;
+        var i = x;
+
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        if(d == 'b'){
+          d = 'w';
+        }
+        else if(d == 'w'){
+          d = 'b';
+        }
+        a += 10;
+        c = d + 'a' + a;
+        if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+          f = document.getElementById(c);
+          ret = true;
+          for(xi in bClassList){
+            x = bClassList[xi];
+            y = wClassList[xi];
+            if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+              rerun_bRook = false;
+              ret = false;
+            }
+            else if(y == f.getAttribute('class')){
+              rerun_bRook = false;
+            }
+          }
+          if(ret){
+            $(f).addClass('moveable');
+          }
+        }
+        else {
+          rerun_bRook = false;
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        if(d == 'b'){
+          d = 'w';
+        }
+        else if(d == 'w'){
+          d = 'b';
+        }
+        a += 1;
+        c = d + 'a' + a;
+        if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+          f = document.getElementById(c);
+          ret = true;
+          for(xi in bClassList){
+            x = bClassList[xi];
+            y = wClassList[xi];
+            if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+              rerun_bRook = false;
+              ret = false;
+            }
+            else if(y == f.getAttribute('class')){
+              rerun_bRook = false;
+            }
+          }
+          if(ret){
+            $(f).addClass('moveable');
+          }
+        }
+        else {
+          rerun_bRook = false;
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        if(d == 'b'){
+          d = 'w';
+        }
+        else if(d == 'w'){
+          d = 'b';
+        }
+        a -= 10;
+        c = d + 'a' + a;
+        if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+          f = document.getElementById(c);
+          ret = true;
+          for(xi in bClassList){
+            x = bClassList[xi];
+            y = wClassList[xi];
+            if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+              rerun_bRook = false;
+              ret = false;
+            }
+            else if(y == f.getAttribute('class')){
+              rerun_bRook = false;
+            }
+          }
+          if(ret){
+            $(f).addClass('moveable');
+          }
+        }
+        else {
+          rerun_bRook = false;
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        if(d == 'b'){
+          d = 'w';
+        }
+        else if(d == 'w'){
+          d = 'b';
+        }
+        a -= 1;
+        c = d + 'a' + a;
+        if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+          f = document.getElementById(c);
+          ret = true;
+          for(xi in bClassList){
+            x = bClassList[xi];
+            y = wClassList[xi];
+            if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+              rerun_bRook = false;
+              ret = false;
+            }
+            else if(y == f.getAttribute('class')){
+              rerun_bRook = false;
+            }
+          }
+          if(ret){
+            $(f).addClass('moveable');
+          }
+        }
+        else {
+          rerun_bRook = false;
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        a += 9;
+        c = d + 'a' + a;
+        if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+          f = document.getElementById(c);
+          ret = true;
+          for(xi in bClassList){
+            x = bClassList[xi];
+            y = wClassList[xi];
+            if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+              rerun_bRook = false;
+              ret = false;
+            }
+            else if(y == f.getAttribute('class')){
+              rerun_bRook = false;
+            }
+          }
+          if(ret){
+            $(f).addClass('moveable');
+          }
+        }
+        else {
+          rerun_bRook = false;
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        a += 11;
+        c = d + 'a' + a;
+        if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+          f = document.getElementById(c);
+          ret = true;
+          for(xi in bClassList){
+            x = bClassList[xi];
+            y = wClassList[xi];
+            if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+              rerun_bRook = false;
+              ret = false;
+            }
+            else if(y == f.getAttribute('class')){
+              rerun_bRook = false;
+            }
+          }
+          if(ret){
+            $(f).addClass('moveable');
+          }
+        }
+        else {
+          rerun_bRook = false;
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        a -= 9;
+        c = d + 'a' + a;
+        if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+          f = document.getElementById(c);
+          ret = true;
+          for(xi in bClassList){
+            x = bClassList[xi];
+            y = wClassList[xi];
+            if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+              rerun_bRook = false;
+              ret = false;
+            }
+            else if(y == f.getAttribute('class')){
+              rerun_bRook = false;
+            }
+          }
+          if(ret){
+            $(f).addClass('moveable');
+          }
+        }
+        else {
+          rerun_bRook = false;
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        a -= 11;
+        c = d + 'a' + a;
+        if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+          f = document.getElementById(c);
+          ret = true;
+          for(xi in bClassList){
+            x = bClassList[xi];
+            y = wClassList[xi];
+            if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+              rerun_bRook = false;
+              ret = false;
+            }
+            else if(y == f.getAttribute('class')){
+              rerun_bRook = false;
+            }
+          }
+          if(ret){
+            $(f).addClass('moveable');
+          }
+        }
+        else {
+          rerun_bRook = false;
+        }
+        if($('.moveable').length > 0){
+          $('#' + xcopy).addClass('moveable2')
+        }
+        $('.moveable').removeClass('moveable');
+
+      }
+      else if(x == '.wking') {
+        x = pawn_id[times];
+        pawn_id.pop();
+        xcopy = x;
+        var i = x;
+
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        if(d == 'b'){
+          d = 'w';
+        }
+        else if(d == 'w'){
+          d = 'b';
+        }
+        a += 10;
+        c = d + 'a' + a;
+        if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+          f = document.getElementById(c);
+          ret = true;
+          for(xi in wClassList){
+            x = wClassList[xi];
+            y = bClassList[xi];
+            if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+              rerun_bRook = false;
+              ret = false;
+            }
+            else if(y == f.getAttribute('class')){
+              rerun_bRook = false;
+            }
+          }
+          if(ret){
+            $(f).addClass('moveable');
+          }
+        }
+        else {
+          rerun_bRook = false;
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        if(d == 'b'){
+          d = 'w';
+        }
+        else if(d == 'w'){
+          d = 'b';
+        }
+        a += 1;
+        c = d + 'a' + a;
+        if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+          f = document.getElementById(c);
+          ret = true;
+          for(xi in wClassList){
+            x = wClassList[xi];
+            y = bClassList[xi];
+            if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+              rerun_bRook = false;
+              ret = false;
+            }
+            else if(y == f.getAttribute('class')){
+              rerun_bRook = false;
+            }
+          }
+          if(ret){
+            $(f).addClass('moveable');
+          }
+        }
+        else {
+          rerun_bRook = false;
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        if(d == 'b'){
+          d = 'w';
+        }
+        else if(d == 'w'){
+          d = 'b';
+        }
+        a -= 10;
+        c = d + 'a' + a;
+        if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+          f = document.getElementById(c);
+          ret = true;
+          for(xi in wClassList){
+            x = wClassList[xi];
+            y = bClassList[xi];
+            if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+              rerun_bRook = false;
+              ret = false;
+            }
+            else if(y == f.getAttribute('class')){
+              rerun_bRook = false;
+            }
+          }
+          if(ret){
+            $(f).addClass('moveable');
+          }
+        }
+        else {
+          rerun_bRook = false;
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        if(d == 'b'){
+          d = 'w';
+        }
+        else if(d == 'w'){
+          d = 'b';
+        }
+        a -= 1;
+        c = d + 'a' + a;
+        if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+          f = document.getElementById(c);
+          ret = true;
+          for(xi in wClassList){
+            x = wClassList[xi];
+            y = bClassList[xi];
+            if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+              rerun_bRook = false;
+              ret = false;
+            }
+            else if(y == f.getAttribute('class')){
+              rerun_bRook = false;
+            }
+          }
+          if(ret){
+            $(f).addClass('moveable');
+          }
+        }
+        else {
+          rerun_bRook = false;
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        a += 9;
+        c = d + 'a' + a;
+        if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+          f = document.getElementById(c);
+          ret = true;
+          for(xi in wClassList){
+            x = wClassList[xi];
+            y = bClassList[xi];
+            if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+              rerun_bRook = false;
+              ret = false;
+            }
+            else if(y == f.getAttribute('class')){
+              rerun_bRook = false;
+            }
+          }
+          if(ret){
+            $(f).addClass('moveable');
+          }
+        }
+        else {
+          rerun_bRook = false;
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        a += 11;
+        c = d + 'a' + a;
+        if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+          f = document.getElementById(c);
+          ret = true;
+          for(xi in wClassList){
+            x = wClassList[xi];
+            y = bClassList[xi];
+            if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+              rerun_bRook = false;
+              ret = false;
+            }
+            else if(y == f.getAttribute('class')){
+              rerun_bRook = false;
+            }
+          }
+          if(ret){
+            $(f).addClass('moveable');
+          }
+        }
+        else {
+          rerun_bRook = false;
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        a -= 9;
+        c = d + 'a' + a;
+        if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+          f = document.getElementById(c);
+          ret = true;
+          for(xi in wClassList){
+            x = wClassList[xi];
+            y = bClassList[xi];
+            if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+              rerun_bRook = false;
+              ret = false;
+            }
+            else if(y == f.getAttribute('class')){
+              rerun_bRook = false;
+            }
+          }
+          if(ret){
+            $(f).addClass('moveable');
+          }
+        }
+        else {
+          rerun_bRook = false;
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        a -= 11;
+        c = d + 'a' + a;
+        if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+          f = document.getElementById(c);
+          ret = true;
+          for(xi in wClassList){
+            x = wClassList[xi];
+            y = bClassList[xi];
+            if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+              rerun_bRook = false;
+              ret = false;
+            }
+            else if(y == f.getAttribute('class')){
+              rerun_bRook = false;
+            }
+          }
+          if(ret){
+            $(f).addClass('moveable');
+          }
+        }
+        else {
+          rerun_bRook = false;
+        }
+        if($('.moveable').length > 0){
+          $('#' + xcopy).addClass('moveable2')
+        }
+        $('.moveable').removeClass('moveable');
+
+      }
+      else if(x == '.bqueen') {
+        x = pawn_id[times];
+        pawn_id.pop();
+        xcopy = x;
+        var i = x;
+
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        rerun_bRook = true;
+        while(rerun_bRook){
+          if(d == 'b'){
+            d = 'w';
+          }
+          else if(d == 'w'){
+            d = 'b';
+          }
+          a += 10;
+          c = d + 'a' + a;
+          if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+            f = document.getElementById(c);
+            ret = true;
+            for(xi in bClassList){
+              x = bClassList[xi];
+              y = wClassList[xi];
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+                rerun_bRook = false;
+                ret = false;
+              }
+              else if(y == f.getAttribute('class')){
+                rerun_bRook = false;
+              }
+            }
+            if(ret){
+              $(f).addClass('moveable');
+            }
+          }
+          else {
+            rerun_bRook = false;
+          }
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        rerun_bRook = true;
+        while(rerun_bRook){
+          if(d == 'b'){
+            d = 'w';
+          }
+          else if(d == 'w'){
+            d = 'b';
+          }
+          a += 1;
+          c = d + 'a' + a;
+          if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+            f = document.getElementById(c);
+            ret = true;
+            for(xi in bClassList){
+              x = bClassList[xi];
+              y = wClassList[xi];
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+                rerun_bRook = false;
+                ret = false;
+              }
+              else if(y == f.getAttribute('class')){
+                rerun_bRook = false;
+              }
+            }
+            if(ret){
+              $(f).addClass('moveable');
+            }
+          }
+          else {
+            rerun_bRook = false;
+          }
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        rerun_bRook = true;
+        while(rerun_bRook){
+          if(d == 'b'){
+            d = 'w';
+          }
+          else if(d == 'w'){
+            d = 'b';
+          }
+          a -= 10;
+          c = d + 'a' + a;
+          if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+            f = document.getElementById(c);
+            ret = true;
+            for(xi in bClassList){
+              x = bClassList[xi];
+              y = wClassList[xi];
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+                rerun_bRook = false;
+                ret = false;
+              }
+              else if(y == f.getAttribute('class')){
+                rerun_bRook = false;
+              }
+            }
+            if(ret){
+              $(f).addClass('moveable');
+            }
+          }
+          else {
+            rerun_bRook = false;
+          }
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        rerun_bRook = true;
+        while(rerun_bRook){
+          if(d == 'b'){
+            d = 'w';
+          }
+          else if(d == 'w'){
+            d = 'b';
+          }
+          a -= 1;
+          c = d + 'a' + a;
+          if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+            f = document.getElementById(c);
+            ret = true;
+            for(xi in bClassList){
+              x = bClassList[xi];
+              y = wClassList[xi];
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+                rerun_bRook = false;
+                ret = false;
+              }
+              else if(y == f.getAttribute('class')){
+                rerun_bRook = false;
+              }
+            }
+            if(ret){
+              $(f).addClass('moveable');
+            }
+          }
+          else {
+            rerun_bRook = false;
+          }
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        rerun_bRook = true;
+        while(rerun_bRook){
+          a += 9;
+          c = d + 'a' + a;
+          if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+            f = document.getElementById(c);
+            ret = true;
+            for(xi in bClassList){
+              x = bClassList[xi];
+              y = wClassList[xi];
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+                rerun_bRook = false;
+                ret = false;
+              }
+              else if(y == f.getAttribute('class')){
+                rerun_bRook = false;
+              }
+            }
+            if(ret){
+              $(f).addClass('moveable');
+            }
+          }
+          else {
+            rerun_bRook = false;
+          }
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        rerun_bRook = true;
+        while(rerun_bRook){
+          a += 11;
+          c = d + 'a' + a;
+          if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+            f = document.getElementById(c);
+            ret = true;
+            for(xi in bClassList){
+              x = bClassList[xi];
+              y = wClassList[xi];
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+                rerun_bRook = false;
+                ret = false;
+              }
+              else if(y == f.getAttribute('class')){
+                rerun_bRook = false;
+              }
+            }
+            if(ret){
+              $(f).addClass('moveable');
+            }
+          }
+          else {
+            rerun_bRook = false;
+          }
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        rerun_bRook = true;
+        while(rerun_bRook){
+          a -= 9;
+          c = d + 'a' + a;
+          if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+            f = document.getElementById(c);
+            ret = true;
+            for(xi in bClassList){
+              x = bClassList[xi];
+              y = wClassList[xi];
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+                rerun_bRook = false;
+                ret = false;
+              }
+              else if(y == f.getAttribute('class')){
+                rerun_bRook = false;
+              }
+            }
+            if(ret){
+              $(f).addClass('moveable');
+            }
+          }
+          else {
+            rerun_bRook = false;
+          }
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        rerun_bRook = true;
+        while(rerun_bRook){
+          a -= 11;
+          c = d + 'a' + a;
+          if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+            f = document.getElementById(c);
+            ret = true;
+            for(xi in bClassList){
+              x = bClassList[xi];
+              y = wClassList[xi];
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+                rerun_bRook = false;
+                ret = false;
+              }
+              else if(y == f.getAttribute('class')){
+                rerun_bRook = false;
+              }
+            }
+            if(ret){
+              $(f).addClass('moveable');
+            }
+          }
+          else {
+            rerun_bRook = false;
+          }
+        }
+        if($('.moveable').length > 0){
+          $('#' + xcopy).addClass('moveable2')
+        }
+        $('.moveable').removeClass('moveable');
+
+      }
+      else if(x == '.wqueen') {
+        x = pawn_id[times];
+        pawn_id.pop();
+        xcopy = x;
+        var i = x;
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        rerun_bRook = true;
+        while(rerun_bRook){
+          if(d == 'b'){
+            d = 'w';
+          }
+          else if(d == 'w'){
+            d = 'b';
+          }
+          a += 10;
+          c = d + 'a' + a;
+          if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+            f = document.getElementById(c);
+            ret = true;
+            for(xi in wClassList){
+              x = wClassList[xi];
+              y = bClassList[xi];
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+                rerun_bRook = false;
+                ret = false;
+              }
+              else if(y == f.getAttribute('class')){
+                rerun_bRook = false;
+              }
+            }
+            if(ret){
+              $(f).addClass('moveable');
+            }
+          }
+          else {
+            rerun_bRook = false;
+          }
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        rerun_bRook = true;
+        while(rerun_bRook){
+          if(d == 'b'){
+            d = 'w';
+          }
+          else if(d == 'w'){
+            d = 'b';
+          }
+          a += 1;
+          c = d + 'a' + a;
+          if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+            f = document.getElementById(c);
+            ret = true;
+            for(xi in wClassList){
+              x = wClassList[xi];
+              y = bClassList[xi];
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+                rerun_bRook = false;
+                ret = false;
+              }
+              else if(y == f.getAttribute('class')){
+                rerun_bRook = false;
+              }
+            }
+            if(ret){
+              $(f).addClass('moveable');
+            }
+          }
+          else {
+            rerun_bRook = false;
+          }
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        rerun_bRook = true;
+        while(rerun_bRook){
+          if(d == 'b'){
+            d = 'w';
+          }
+          else if(d == 'w'){
+            d = 'b';
+          }
+          a -= 10;
+          c = d + 'a' + a;
+          if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+            f = document.getElementById(c);
+            ret = true;
+            for(xi in wClassList){
+              x = wClassList[xi];
+              y = bClassList[xi];
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+                rerun_bRook = false;
+                ret = false;
+              }
+              else if(y == f.getAttribute('class')){
+                rerun_bRook = false;
+              }
+            }
+            if(ret){
+              $(f).addClass('moveable');
+            }
+          }
+          else {
+            rerun_bRook = false;
+          }
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        rerun_bRook = true;
+        while(rerun_bRook){
+          if(d == 'b'){
+            d = 'w';
+          }
+          else if(d == 'w'){
+            d = 'b';
+          }
+          a -= 1;
+          c = d + 'a' + a;
+          if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+            f = document.getElementById(c);
+            ret = true;
+            for(xi in wClassList){
+              x = wClassList[xi];
+              y = bClassList[xi];
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+                rerun_bRook = false;
+                ret = false;
+              }
+              else if(y == f.getAttribute('class')){
+                rerun_bRook = false;
+              }
+            }
+            if(ret){
+              $(f).addClass('moveable');
+            }
+          }
+          else {
+            rerun_bRook = false;
+          }
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        rerun_bRook = true;
+        while(rerun_bRook){
+          a += 9;
+          c = d + 'a' + a;
+          if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+            f = document.getElementById(c);
+            ret = true;
+            for(xi in wClassList){
+              x = wClassList[xi];
+              y = bClassList[xi];
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+                rerun_bRook = false;
+                ret = false;
+              }
+              else if(y == f.getAttribute('class')){
+                rerun_bRook = false;
+              }
+            }
+            if(ret){
+              $(f).addClass('moveable');
+            }
+          }
+          else {
+            rerun_bRook = false;
+          }
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        rerun_bRook = true;
+        while(rerun_bRook){
+          a += 11;
+          c = d + 'a' + a;
+          if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+            f = document.getElementById(c);
+            ret = true;
+            for(xi in wClassList){
+              x = wClassList[xi];
+              y = bClassList[xi];
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+                rerun_bRook = false;
+                ret = false;
+              }
+              else if(y == f.getAttribute('class')){
+                rerun_bRook = false;
+              }
+            }
+            if(ret){
+              $(f).addClass('moveable');
+            }
+          }
+          else {
+            rerun_bRook = false;
+          }
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        rerun_bRook = true;
+        while(rerun_bRook){
+          a -= 9;
+          c = d + 'a' + a;
+          if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+            f = document.getElementById(c);
+            ret = true;
+            for(xi in wClassList){
+              x = wClassList[xi];
+              y = bClassList[xi];
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+                rerun_bRook = false;
+                ret = false;
+              }
+              else if(y == f.getAttribute('class')){
+                rerun_bRook = false;
+              }
+            }
+            if(ret){
+              $(f).addClass('moveable');
+            }
+          }
+          else {
+            rerun_bRook = false;
+          }
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        rerun_bRook = true;
+        while(rerun_bRook){
+          a -= 11;
+          c = d + 'a' + a;
+          if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+            f = document.getElementById(c);
+            ret = true;
+            for(xi in wClassList){
+              x = wClassList[xi];
+              y = bClassList[xi];
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+                rerun_bRook = false;
+                ret = false;
+              }
+              else if(y == f.getAttribute('class')){
+                rerun_bRook = false;
+              }
+            }
+            if(ret){
+              $(f).addClass('moveable');
+            }
+          }
+          else {
+            rerun_bRook = false;
+          }
+        }
+        if($('.moveable').length > 0){
+          $('#' + xcopy).addClass('moveable2')
+        }
+        $('.moveable').removeClass('moveable');
+
+      }
+      else if(x == '.bbishop') {
+        x = pawn_id[times];
+        pawn_id.pop();
+        xcopy = x;
+        var i = x;
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        rerun_bRook = true;
+        while(rerun_bRook){
+          a += 9;
+          c = d + 'a' + a;
+          if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+            f = document.getElementById(c);
+            ret = true;
+            for(xi in bClassList){
+              x = bClassList[xi];
+              y = wClassList[xi];
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+                rerun_bRook = false;
+                ret = false;
+              }
+              else if(y == f.getAttribute('class')){
+                rerun_bRook = false;
+              }
+            }
+            if(ret){
+              $(f).addClass('moveable');
+            }
+          }
+          else {
+            rerun_bRook = false;
+          }
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        rerun_bRook = true;
+        while(rerun_bRook){
+          a += 11;
+          c = d + 'a' + a;
+          if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+            f = document.getElementById(c);
+            ret = true;
+            for(xi in bClassList){
+              x = bClassList[xi];
+              y = wClassList[xi];
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+                rerun_bRook = false;
+                ret = false;
+              }
+              else if(y == f.getAttribute('class')){
+                rerun_bRook = false;
+              }
+            }
+            if(ret){
+              $(f).addClass('moveable');
+            }
+          }
+          else {
+            rerun_bRook = false;
+          }
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        rerun_bRook = true;
+        while(rerun_bRook){
+          a -= 9;
+          c = d + 'a' + a;
+          if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+            f = document.getElementById(c);
+            ret = true;
+            for(xi in bClassList){
+              x = bClassList[xi];
+              y = wClassList[xi];
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+                rerun_bRook = false;
+                ret = false;
+              }
+              else if(y == f.getAttribute('class')){
+                rerun_bRook = false;
+              }
+            }
+            if(ret){
+              $(f).addClass('moveable');
+            }
+          }
+          else {
+            rerun_bRook = false;
+          }
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        rerun_bRook = true;
+        while(rerun_bRook){
+          a -= 11;
+          c = d + 'a' + a;
+          if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+            f = document.getElementById(c);
+            ret = true;
+            for(xi in bClassList){
+              x = bClassList[xi];
+              y = wClassList[xi];
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+                rerun_bRook = false;
+                ret = false;
+              }
+              else if(y == f.getAttribute('class')){
+                rerun_bRook = false;
+              }
+            }
+            if(ret){
+              $(f).addClass('moveable');
+            }
+          }
+          else {
+            rerun_bRook = false;
+          }
+        }
+        if($('.moveable').length > 0){
+          $('#' + xcopy).addClass('moveable2')
+        }
+        $('.moveable').removeClass('moveable');
+
+      }
+      else if(x == '.wbishop') {
+        x = pawn_id[times];
+        pawn_id.pop();
+        xcopy = x;
+        var i = x;
+
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        rerun_bRook = true;
+        while(rerun_bRook){
+          a += 9;
+          c = d + 'a' + a;
+          if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+            f = document.getElementById(c);
+            ret = true;
+            for(xi in wClassList){
+              x = wClassList[xi];
+              y = bClassList[xi];
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+                rerun_bRook = false;
+                ret = false;
+              }
+              else if(y == f.getAttribute('class')){
+                rerun_bRook = false;
+              }
+            }
+            if(ret){
+              $(f).addClass('moveable');
+            }
+          }
+          else {
+            rerun_bRook = false;
+          }
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        rerun_bRook = true;
+        while(rerun_bRook){
+          a += 11;
+          c = d + 'a' + a;
+          if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+            f = document.getElementById(c);
+            ret = true;
+            for(xi in wClassList){
+              x = wClassList[xi];
+              y = bClassList[xi];
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+                rerun_bRook = false;
+                ret = false;
+              }
+              else if(y == f.getAttribute('class')){
+                rerun_bRook = false;
+              }
+            }
+            if(ret){
+              $(f).addClass('moveable');
+            }
+          }
+          else {
+            rerun_bRook = false;
+          }
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        rerun_bRook = true;
+        while(rerun_bRook){
+          a -= 9;
+          c = d + 'a' + a;
+          if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+            f = document.getElementById(c);
+            ret = true;
+            for(xi in wClassList){
+              x = wClassList[xi];
+              y = bClassList[xi];
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+                rerun_bRook = false;
+                ret = false;
+              }
+              else if(y == f.getAttribute('class')){
+                rerun_bRook = false;
+              }
+            }
+            if(ret){
+              $(f).addClass('moveable');
+            }
+          }
+          else {
+            rerun_bRook = false;
+          }
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        rerun_bRook = true;
+        while(rerun_bRook){
+          a -= 11;
+          c = d + 'a' + a;
+          if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+            f = document.getElementById(c);
+            ret = true;
+            for(xi in wClassList){
+              x = wClassList[xi];
+              y = bClassList[xi];
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+                rerun_bRook = false;
+                ret = false;
+              }
+              else if(y == f.getAttribute('class')){
+                rerun_bRook = false;
+              }
+            }
+            if(ret){
+              $(f).addClass('moveable');
+            }
+          }
+          else {
+            rerun_bRook = false;
+          }
+        }
+        if($('.moveable').length > 0){
+          $('#' + xcopy).addClass('moveable2')
+        }
+        $('.moveable').removeClass('moveable');
+
+      }
+      else if(x == '.brook') {
+        x = pawn_id[times];
+        pawn_id.pop();
+        xcopy = x;
+        var i = x;
+
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        rerun_bRook = true;
+        while(rerun_bRook){
+          if(d == 'b'){
+            d = 'w';
+          }
+          else if(d == 'w'){
+            d = 'b';
+          }
+          a += 10;
+          c = d + 'a' + a;
+          if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+            f = document.getElementById(c);
+            ret = true;
+            for(xi in bClassList){
+              x = bClassList[xi];
+              y = wClassList[xi];
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+                rerun_bRook = false;
+                ret = false;
+              }
+              else if(y == f.getAttribute('class')){
+                rerun_bRook = false;
+              }
+            }
+            if(ret){
+              $(f).addClass('moveable');
+            }
+          }
+          else {
+            rerun_bRook = false;
+          }
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        rerun_bRook = true;
+        while(rerun_bRook){
+          if(d == 'b'){
+            d = 'w';
+          }
+          else if(d == 'w'){
+            d = 'b';
+          }
+          a += 1;
+          c = d + 'a' + a;
+          if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+            f = document.getElementById(c);
+            ret = true;
+            for(xi in bClassList){
+              x = bClassList[xi];
+              y = wClassList[xi];
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+                rerun_bRook = false;
+                ret = false;
+              }
+              else if(y == f.getAttribute('class')){
+                rerun_bRook = false;
+              }
+            }
+            if(ret){
+              $(f).addClass('moveable');
+            }
+          }
+          else {
+            rerun_bRook = false;
+          }
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        rerun_bRook = true;
+        while(rerun_bRook){
+          if(d == 'b'){
+            d = 'w';
+          }
+          else if(d == 'w'){
+            d = 'b';
+          }
+          a -= 10;
+          c = d + 'a' + a;
+          if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+            f = document.getElementById(c);
+            ret = true;
+            for(xi in bClassList){
+              x = bClassList[xi];
+              y = wClassList[xi];
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+                rerun_bRook = false;
+                ret = false;
+              }
+              else if(y == f.getAttribute('class')){
+                rerun_bRook = false;
+              }
+            }
+            if(ret){
+              $(f).addClass('moveable');
+            }
+          }
+          else {
+            rerun_bRook = false;
+          }
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        rerun_bRook = true;
+        while(rerun_bRook){
+          if(d == 'b'){
+            d = 'w';
+          }
+          else if(d == 'w'){
+            d = 'b';
+          }
+          a -= 1;
+          c = d + 'a' + a;
+          if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+            f = document.getElementById(c);
+            ret = true;
+            for(xi in bClassList){
+              x = bClassList[xi];
+              y = wClassList[xi];
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+                rerun_bRook = false;
+                ret = false;
+              }
+              else if(y == f.getAttribute('class')){
+                rerun_bRook = false;
+              }
+            }
+            if(ret){
+              $(f).addClass('moveable');
+            }
+          }
+          else {
+            rerun_bRook = false;
+          }
+        }
+        if($('.moveable').length > 0){
+          $('#' + xcopy).addClass('moveable2')
+        }
+        $('.moveable').removeClass('moveable');
+
+      }
+      else if(x == '.wrook') {
+        x = pawn_id[times];
+        pawn_id.pop();
+        xcopy = x;
+        var i = x;
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        rerun_wRook = true;
+        while(rerun_wRook){
+          if(d == 'b'){
+            d = 'w';
+          }
+          else if(d == 'w'){
+            d = 'b';
+          }
+          a += 10;
+          c = d + 'a' + a;
+          if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+            f = document.getElementById(c);
+            ret = true;
+            for(xi in wClassList){
+              x = wClassList[xi];
+              y = bClassList[xi];
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+                rerun_wRook = false;
+                ret = false;
+              }
+              else if(y == f.getAttribute('class')){
+                rerun_wRook = false;
+              }
+            }
+            if(ret){
+              $(f).addClass('moveable');
+            }
+          }
+          else {
+            rerun_wRook = false;
+          }
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        rerun_wRook = true;
+        while(rerun_wRook){
+          if(d == 'b'){
+            d = 'w';
+          }
+          else if(d == 'w'){
+            d = 'b';
+          }
+          a += 1;
+          c = d + 'a' + a;
+          if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+            f = document.getElementById(c);
+            ret = true;
+            for(xi in wClassList){
+              x = wClassList[xi];
+              y = bClassList[xi];
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+                rerun_wRook = false;
+                ret = false;
+              }
+              else if(y == f.getAttribute('class')){
+                rerun_wRook = false;
+              }
+            }
+            if(ret){
+              $(f).addClass('moveable');
+            }
+          }
+          else {
+            rerun_wRook = false;
+          }
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        rerun_wRook = true;
+        while(rerun_wRook){
+          if(d == 'b'){
+            d = 'w';
+          }
+          else if(d == 'w'){
+            d = 'b';
+          }
+          a -= 10;
+          c = d + 'a' + a;
+          if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+            f = document.getElementById(c);
+            ret = true;
+            for(xi in wClassList){
+              x = wClassList[xi];
+              y = bClassList[xi];
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+                rerun_wRook = false;
+                ret = false;
+              }
+              else if(y == f.getAttribute('class')){
+                rerun_wRook = false;
+              }
+            }
+            if(ret){
+              $(f).addClass('moveable');
+            }
+          }
+          else {
+            rerun_wRook = false;
+          }
+        }
+        var a = '';
+        d = i[0];
+        a += i[2];
+        a += i[3];
+        a = parseInt(a);
+        rerun_wRook = true;
+        while(rerun_wRook){
+          if(d == 'b'){
+            d = 'w';
+          }
+          else if(d == 'w'){
+            d = 'b';
+          }
+          a -= 1;
+          c = d + 'a' + a;
+          if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
+            f = document.getElementById(c);
+            ret = true;
+            for(xi in wClassList){
+              x = wClassList[xi];
+              y = bClassList[xi];
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
+                rerun_wRook = false;
+                ret = false;
+              }
+              else if(y == f.getAttribute('class')){
+                rerun_wRook = false;
+              }
+            }
+            if(ret){
+              $(f).addClass('moveable');
+            }
+          }
+          else {
+            rerun_wRook = false;
+          }
+        }
+        if($('.moveable').length > 0) {
+          $('#' + xcopy).addClass('moveable2')
+        }
+        $('.moveable').removeClass('moveable');
+      }
+      else if(x == '.bknight') {
         x = pawn_id[times];
         pawn_id.pop();
         xcopy = x;
@@ -372,8 +2048,8 @@ $(document).ready(function() {
         else if(i[0] == 'w'){
           d = 'b';
         }
+        a += 10;
         if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
-          a += 10;
           c = d + 'a' + a;
           c1 = d + 'a' + a;
           c2 = d + 'a' + a;
@@ -407,7 +2083,11 @@ $(document).ready(function() {
           ret2 = false;
           for(xi in wClassList){
             x = wClassList[xi];
-            if(f.getAttribute('class') == x){
+            y = bClassList[xi];
+            if(f.getAttribute('class') == y || f.getAttribute('class') == y + ' moveable2'){
+              ret = false;
+            }
+            if(f.getAttribute('class') == x || f.getAttribute('class') == x + ' moveable2'){
               ret = false;
             }
             if(c1 != c){
@@ -486,7 +2166,11 @@ $(document).ready(function() {
           ret2 = false;
           for(xi in bClassList){
             x = bClassList[xi];
-            if(f.getAttribute('class') == x){
+            y = wClassList[xi];
+            if(f.getAttribute('class') == y || f.getAttribute('class') == y + ' moveable2'){
+              ret = false;
+            }
+            if(f.getAttribute('class') == x || f.getAttribute('class') == x + ' moveable2'){
               ret = false;
             }
             if(c1 != c){
@@ -738,7 +2422,7 @@ $(document).ready(function() {
           else if(d == 'w'){
             d = 'b'
           }
-          var f = document.getElementById(c);
+          f = document.getElementById(c);
           if(c1 != c){
             f1 = document.getElementById(c1);
           }
@@ -750,7 +2434,11 @@ $(document).ready(function() {
           ret2 = false;
           for(xi in wClassList){
             x = wClassList[xi];
-            if(f.getAttribute('class') == x){
+            y = bClassList[xi];
+            if(f.getAttribute('class') == y || f.getAttribute('class') == y + ' moveable2'){
+              ret = false;
+            }
+            if(f.getAttribute('class') == x || f.getAttribute('class') == x + ' moveable2'){
               ret = false;
             }
             if(c1 != c){
@@ -782,10 +2470,9 @@ $(document).ready(function() {
           a += 10;
           c = d + 'a' + a;
           f = document.getElementById(c);
-          ret = true;
           for(xi in bClassList){
-            x = bClassList[xi]
-            if(x == f.getAttribute('class')){
+            x = bClassList[xi];
+            if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
               ret = false;
             }
           }
@@ -795,7 +2482,7 @@ $(document).ready(function() {
         }
         else if(a > 10 && a < 89 && a % 10 != 9 && a % 10 != 0){
           a += 10;
-          var c = d + 'a' + a;
+          c = d + 'a' + a;
           c1 = d + 'a' + a;
           c2 = d + 'a' + a;
           if(d == 'b'){
@@ -816,7 +2503,7 @@ $(document).ready(function() {
           else if(d == 'w'){
             d = 'b'
           }
-          var f = document.getElementById(c);
+          f = document.getElementById(c);
           if(c1 != c){
             f1 = document.getElementById(c1);
           }
@@ -828,7 +2515,11 @@ $(document).ready(function() {
           ret2 = false;
           for(xi in wClassList){
             x = wClassList[xi];
-            if(f.getAttribute('class') == x){
+            y = bClassList[xi];
+            if(f.getAttribute('class') == y || f.getAttribute('class') == y + ' moveable2'){
+              ret = false;
+            }
+            if(f.getAttribute('class') == x || f.getAttribute('class') == x + ' moveable2'){
               ret = false;
             }
             if(c1 != c){
@@ -914,7 +2605,7 @@ $(document).ready(function() {
             for(xi in bClassList){
               x = bClassList[xi];
               y = wClassList[xi];
-              if(x == f.getAttribute('class')){
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
                 rerun_bRook = false;
                 ret = false;
               }
@@ -951,7 +2642,7 @@ $(document).ready(function() {
             for(xi in bClassList){
               x = bClassList[xi];
               y = wClassList[xi];
-              if(x == f.getAttribute('class')){
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
                 rerun_bRook = false;
                 ret = false;
               }
@@ -988,7 +2679,7 @@ $(document).ready(function() {
             for(xi in bClassList){
               x = bClassList[xi];
               y = wClassList[xi];
-              if(x == f.getAttribute('class')){
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
                 rerun_bRook = false;
                 ret = false;
               }
@@ -1025,7 +2716,7 @@ $(document).ready(function() {
             for(xi in bClassList){
               x = bClassList[xi];
               y = wClassList[xi];
-              if(x == f.getAttribute('class')){
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
                 rerun_bRook = false;
                 ret = false;
               }
@@ -1095,7 +2786,7 @@ $(document).ready(function() {
             for(xi in bClassList){
               x = bClassList[xi];
               y = wClassList[xi];
-              if(x == f.getAttribute('class')){
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
                 rerun_bRook = false;
                 ret = false;
               }
@@ -1126,7 +2817,7 @@ $(document).ready(function() {
             for(xi in bClassList){
               x = bClassList[xi];
               y = wClassList[xi];
-              if(x == f.getAttribute('class')){
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
                 rerun_bRook = false;
                 ret = false;
               }
@@ -1157,7 +2848,7 @@ $(document).ready(function() {
             for(xi in bClassList){
               x = bClassList[xi];
               y = wClassList[xi];
-              if(x == f.getAttribute('class')){
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
                 rerun_bRook = false;
                 ret = false;
               }
@@ -1188,7 +2879,7 @@ $(document).ready(function() {
             for(xi in bClassList){
               x = bClassList[xi];
               y = wClassList[xi];
-              if(x == f.getAttribute('class')){
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
                 rerun_bRook = false;
                 ret = false;
               }
@@ -1264,7 +2955,7 @@ $(document).ready(function() {
             for(xi in bClassList){
               x = bClassList[xi];
               y = wClassList[xi];
-              if(x == f.getAttribute('class')){
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
                 rerun_bRook = false;
                 ret = false;
               }
@@ -1301,7 +2992,7 @@ $(document).ready(function() {
             for(xi in bClassList){
               x = bClassList[xi];
               y = wClassList[xi];
-              if(x == f.getAttribute('class')){
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
                 rerun_bRook = false;
                 ret = false;
               }
@@ -1338,7 +3029,7 @@ $(document).ready(function() {
             for(xi in bClassList){
               x = bClassList[xi];
               y = wClassList[xi];
-              if(x == f.getAttribute('class')){
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
                 rerun_bRook = false;
                 ret = false;
               }
@@ -1375,7 +3066,7 @@ $(document).ready(function() {
             for(xi in bClassList){
               x = bClassList[xi];
               y = wClassList[xi];
-              if(x == f.getAttribute('class')){
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
                 rerun_bRook = false;
                 ret = false;
               }
@@ -1408,7 +3099,7 @@ $(document).ready(function() {
             for(xi in bClassList){
               x = bClassList[xi];
               y = wClassList[xi];
-              if(x == f.getAttribute('class')){
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
                 rerun_bRook = false;
                 ret = false;
               }
@@ -1439,7 +3130,7 @@ $(document).ready(function() {
             for(xi in bClassList){
               x = bClassList[xi];
               y = wClassList[xi];
-              if(x == f.getAttribute('class')){
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
                 rerun_bRook = false;
                 ret = false;
               }
@@ -1470,7 +3161,7 @@ $(document).ready(function() {
             for(xi in bClassList){
               x = bClassList[xi];
               y = wClassList[xi];
-              if(x == f.getAttribute('class')){
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
                 rerun_bRook = false;
                 ret = false;
               }
@@ -1501,7 +3192,7 @@ $(document).ready(function() {
             for(xi in bClassList){
               x = bClassList[xi];
               y = wClassList[xi];
-              if(x == f.getAttribute('class')){
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
                 rerun_bRook = false;
                 ret = false;
               }
@@ -1529,17 +3220,7 @@ $(document).ready(function() {
           add = true;
           for(xi in wClassList){
             x = wClassList[xi];
-            if(x == 'wking') {
-              idd = this.id;
-              f = document.getElementById(idd);
-              if(f.getAttribute('class') == 'wking') {
-                add = false;
-              }
-            }
             $(this).removeClass(x);
-          }
-          if(add){
-            $(this).addClass('bqueen');
           }
           $(this).addClass('bqueen');
           $('.moveable').removeClass('moveable');
@@ -1575,7 +3256,7 @@ $(document).ready(function() {
           for(xi in bClassList){
             x = bClassList[xi];
             y = wClassList[xi];
-            if(x == f.getAttribute('class')){
+            if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
               rerun_bRook = false;
               ret = false;
             }
@@ -1609,7 +3290,7 @@ $(document).ready(function() {
           for(xi in bClassList){
             x = bClassList[xi];
             y = wClassList[xi];
-            if(x == f.getAttribute('class')){
+            if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
               rerun_bRook = false;
               ret = false;
             }
@@ -1643,7 +3324,7 @@ $(document).ready(function() {
           for(xi in bClassList){
             x = bClassList[xi];
             y = wClassList[xi];
-            if(x == f.getAttribute('class')){
+            if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
               rerun_bRook = false;
               ret = false;
             }
@@ -1677,7 +3358,7 @@ $(document).ready(function() {
           for(xi in bClassList){
             x = bClassList[xi];
             y = wClassList[xi];
-            if(x == f.getAttribute('class')){
+            if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
               rerun_bRook = false;
               ret = false;
             }
@@ -1707,7 +3388,7 @@ $(document).ready(function() {
           for(xi in bClassList){
             x = bClassList[xi];
             y = wClassList[xi];
-            if(x == f.getAttribute('class')){
+            if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
               rerun_bRook = false;
               ret = false;
             }
@@ -1735,7 +3416,7 @@ $(document).ready(function() {
           for(xi in bClassList){
             x = bClassList[xi];
             y = wClassList[xi];
-            if(x == f.getAttribute('class')){
+            if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
               rerun_bRook = false;
               ret = false;
             }
@@ -1763,7 +3444,7 @@ $(document).ready(function() {
           for(xi in bClassList){
             x = bClassList[xi];
             y = wClassList[xi];
-            if(x == f.getAttribute('class')){
+            if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
               rerun_bRook = false;
               ret = false;
             }
@@ -1791,7 +3472,7 @@ $(document).ready(function() {
           for(xi in bClassList){
             x = bClassList[xi];
             y = wClassList[xi];
-            if(x == f.getAttribute('class')){
+            if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
               rerun_bRook = false;
               ret = false;
             }
@@ -2043,18 +3724,16 @@ $(document).ready(function() {
             d = 'b'
           }
           f = document.getElementById(c);
-          if(c1 != c){
-            f1 = document.getElementById(c1);
-          }
-          if(c2 != c){
-            f2 = document.getElementById(c2);
-          }
           ret = true;
           ret1 = false;
           ret2 = false;
-          for(xi in bClassList){
-            x = bClassList[xi];
-            if(f.getAttribute('class') == x){
+          for(xi in wClassList){
+            x = wClassList[xi];
+            y = bClassList[xi];
+            if(f.getAttribute('class') == y || f.getAttribute('class') == y + ' moveable2'){
+              ret = false;
+            }
+            if(f.getAttribute('class') == x || f.getAttribute('class') == x + ' moveable2'){
               ret = false;
             }
             if(c1 != c){
@@ -2086,10 +3765,9 @@ $(document).ready(function() {
           a -= 10;
           c = d + 'a' + a;
           f = document.getElementById(c);
-          ret = true;
           for(xi in bClassList){
             x = bClassList[xi]
-            if(x == f.getAttribute('class')){
+            if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
               ret = false;
             }
           }
@@ -2132,7 +3810,7 @@ $(document).ready(function() {
           ret2 = false;
           for(xi in bClassList){
             x = bClassList[xi];
-            if(f.getAttribute('class') == x){
+            if(f.getAttribute('class') == x || f.getAttribute('class') == x + ' moveable2'){
               ret = false;
             }
             if(c1 != c){
@@ -2221,7 +3899,7 @@ $(document).ready(function() {
             for(xi in wClassList){
               x = wClassList[xi];
               y = bClassList[xi];
-              if(x == f.getAttribute('class')){
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
                 rerun_wRook = false;
                 ret = false;
               }
@@ -2258,7 +3936,7 @@ $(document).ready(function() {
             for(xi in wClassList){
               x = wClassList[xi];
               y = bClassList[xi];
-              if(x == f.getAttribute('class')){
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
                 rerun_wRook = false;
                 ret = false;
               }
@@ -2295,7 +3973,7 @@ $(document).ready(function() {
             for(xi in wClassList){
               x = wClassList[xi];
               y = bClassList[xi];
-              if(x == f.getAttribute('class')){
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
                 rerun_wRook = false;
                 ret = false;
               }
@@ -2332,7 +4010,7 @@ $(document).ready(function() {
             for(xi in wClassList){
               x = wClassList[xi];
               y = bClassList[xi];
-              if(x == f.getAttribute('class')){
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
                 rerun_wRook = false;
                 ret = false;
               }
@@ -2357,16 +4035,8 @@ $(document).ready(function() {
           i = this.id;
           a += i[2];
           a += i[3];
-          add = true;
           for(xi in wClassList){
             x = bClassList[xi];
-            if(x == 'bking') {
-              idd = this.id;
-              f = document.getElementById(idd);
-              if(f.getAttribute('class') == 'bking') {
-                add = false;
-              }
-            }
             $(this).removeClass(x);
           }
           if(add){
@@ -2402,7 +4072,7 @@ $(document).ready(function() {
             for(xi in wClassList){
               x = wClassList[xi];
               y = bClassList[xi];
-              if(x == f.getAttribute('class')){
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
                 rerun_bRook = false;
                 ret = false;
               }
@@ -2433,7 +4103,7 @@ $(document).ready(function() {
             for(xi in wClassList){
               x = wClassList[xi];
               y = bClassList[xi];
-              if(x == f.getAttribute('class')){
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
                 rerun_bRook = false;
                 ret = false;
               }
@@ -2464,7 +4134,7 @@ $(document).ready(function() {
             for(xi in wClassList){
               x = wClassList[xi];
               y = bClassList[xi];
-              if(x == f.getAttribute('class')){
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
                 rerun_bRook = false;
                 ret = false;
               }
@@ -2495,7 +4165,7 @@ $(document).ready(function() {
             for(xi in wClassList){
               x = wClassList[xi];
               y = bClassList[xi];
-              if(x == f.getAttribute('class')){
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
                 rerun_bRook = false;
                 ret = false;
               }
@@ -2522,14 +4192,7 @@ $(document).ready(function() {
           a += i[3];
           add = true;
           for(xi in bClassList){
-            x = wClassList[xi];
-            if(x == 'bking') {
-              idd = this.id;
-              f = document.getElementById(idd);
-              if(f.getAttribute('class') == 'bking') {
-                add = false;
-              }
-            }
+            x = bClassList[xi];
             $(this).removeClass(x);
           }
           if(add){
@@ -2571,7 +4234,7 @@ $(document).ready(function() {
             for(xi in wClassList){
               x = wClassList[xi];
               y = bClassList[xi];
-              if(x == f.getAttribute('class')){
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
                 rerun_bRook = false;
                 ret = false;
               }
@@ -2608,7 +4271,7 @@ $(document).ready(function() {
             for(xi in wClassList){
               x = wClassList[xi];
               y = bClassList[xi];
-              if(x == f.getAttribute('class')){
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
                 rerun_bRook = false;
                 ret = false;
               }
@@ -2645,7 +4308,7 @@ $(document).ready(function() {
             for(xi in wClassList){
               x = wClassList[xi];
               y = bClassList[xi];
-              if(x == f.getAttribute('class')){
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
                 rerun_bRook = false;
                 ret = false;
               }
@@ -2682,7 +4345,7 @@ $(document).ready(function() {
             for(xi in wClassList){
               x = wClassList[xi];
               y = bClassList[xi];
-              if(x == f.getAttribute('class')){
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
                 rerun_bRook = false;
                 ret = false;
               }
@@ -2715,7 +4378,7 @@ $(document).ready(function() {
             for(xi in wClassList){
               x = wClassList[xi];
               y = bClassList[xi];
-              if(x == f.getAttribute('class')){
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
                 rerun_bRook = false;
                 ret = false;
               }
@@ -2746,7 +4409,7 @@ $(document).ready(function() {
             for(xi in wClassList){
               x = wClassList[xi];
               y = bClassList[xi];
-              if(x == f.getAttribute('class')){
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
                 rerun_bRook = false;
                 ret = false;
               }
@@ -2777,7 +4440,7 @@ $(document).ready(function() {
             for(xi in wClassList){
               x = wClassList[xi];
               y = bClassList[xi];
-              if(x == f.getAttribute('class')){
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
                 rerun_bRook = false;
                 ret = false;
               }
@@ -2808,7 +4471,7 @@ $(document).ready(function() {
             for(xi in wClassList){
               x = wClassList[xi];
               y = bClassList[xi];
-              if(x == f.getAttribute('class')){
+              if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
                 rerun_bRook = false;
                 ret = false;
               }
@@ -2882,7 +4545,7 @@ $(document).ready(function() {
           for(xi in wClassList){
             x = wClassList[xi];
             y = bClassList[xi];
-            if(x == f.getAttribute('class')){
+            if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
               rerun_bRook = false;
               ret = false;
             }
@@ -2916,7 +4579,7 @@ $(document).ready(function() {
           for(xi in wClassList){
             x = wClassList[xi];
             y = bClassList[xi];
-            if(x == f.getAttribute('class')){
+            if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
               rerun_bRook = false;
               ret = false;
             }
@@ -2950,7 +4613,7 @@ $(document).ready(function() {
           for(xi in wClassList){
             x = wClassList[xi];
             y = bClassList[xi];
-            if(x == f.getAttribute('class')){
+            if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
               rerun_bRook = false;
               ret = false;
             }
@@ -2984,7 +4647,7 @@ $(document).ready(function() {
           for(xi in wClassList){
             x = wClassList[xi];
             y = bClassList[xi];
-            if(x == f.getAttribute('class')){
+            if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
               rerun_bRook = false;
               ret = false;
             }
@@ -3014,7 +4677,7 @@ $(document).ready(function() {
           for(xi in wClassList){
             x = wClassList[xi];
             y = bClassList[xi];
-            if(x == f.getAttribute('class')){
+            if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
               rerun_bRook = false;
               ret = false;
             }
@@ -3042,7 +4705,7 @@ $(document).ready(function() {
           for(xi in wClassList){
             x = wClassList[xi];
             y = bClassList[xi];
-            if(x == f.getAttribute('class')){
+            if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
               rerun_bRook = false;
               ret = false;
             }
@@ -3070,7 +4733,7 @@ $(document).ready(function() {
           for(xi in wClassList){
             x = wClassList[xi];
             y = bClassList[xi];
-            if(x == f.getAttribute('class')){
+            if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
               rerun_bRook = false;
               ret = false;
             }
@@ -3098,7 +4761,7 @@ $(document).ready(function() {
           for(xi in wClassList){
             x = wClassList[xi];
             y = bClassList[xi];
-            if(x == f.getAttribute('class')){
+            if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
               rerun_bRook = false;
               ret = false;
             }
