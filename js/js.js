@@ -2201,7 +2201,7 @@ $(document).ready(function() {
       }
     }
     function refresh() {
-      location.replace('../chess');
+      location.replace('../chessGame');
     }
     if($('.bking').length < 1) {
       alert('WHITE WINS!!!!!!');
