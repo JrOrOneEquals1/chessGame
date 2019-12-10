@@ -3855,9 +3855,6 @@ $(document).ready(function() {
             }
             $(this).removeClass(x);
           }
-          if(add){
-            $(this).addClass('wpawn');
-          }
           if(a > 10 && a < 19 && add) {
             $(this).addClass('wqueen');
           }
