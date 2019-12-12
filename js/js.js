@@ -3702,7 +3702,7 @@ $(document).ready(function() {
         }
         if(a > 70 && a < 79 ){
           a -= 10;
-          c = d + 'a' + a;
+          var c = d + 'a' + a;
           c1 = d + 'a' + a;
           c2 = d + 'a' + a;
           if(d == 'b'){
@@ -3724,12 +3724,18 @@ $(document).ready(function() {
             d = 'b'
           }
           f = document.getElementById(c);
+          if(c1 != c){
+            f1 = document.getElementById(c1);
+          }
+          if(c2 != c){
+            f2 = document.getElementById(c2);
+          }
           ret = true;
           ret1 = false;
           ret2 = false;
           for(xi in wClassList){
-            x = wClassList[xi];
-            y = bClassList[xi];
+            x = bClassList[xi];
+            y = wClassList[xi];
             if(f.getAttribute('class') == y || f.getAttribute('class') == y + ' moveable2'){
               ret = false;
             }
@@ -3766,7 +3772,7 @@ $(document).ready(function() {
           c = d + 'a' + a;
           f = document.getElementById(c);
           for(xi in bClassList){
-            x = bClassList[xi]
+            x = wClassList[xi];
             if(x == f.getAttribute('class') || x + ' moveable2' == f.getAttribute('class')){
               ret = false;
             }
