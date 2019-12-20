@@ -22,15 +22,12 @@ $(document).ready(function() {
             times1 -= 1;
           }
         }
-        else if(x != '.wking' && x != '.wqueen' && $(x).length > 0) {
+        else if($(x).length > 0) {
           times1 = $(x).length;
           while(times1 > 0){
             move(x, pawn_id);
             times1 -= 1;
           }
-        }
-        else if($(x).length > 0) {
-          move(x, pawn_id)
         }
       }
     }
@@ -2741,6 +2738,13 @@ $(document).ready(function() {
           i = this.id;
           a += i[2];
           a += i[3];
+          f = document.getElementsByClassName('bking')[0];
+          if(a == '13' && f.getAttribute('id') == 'wa14'){
+            mking = true;
+          }
+          else {
+            mking = false;
+          }
           add = true;
           for(xi in wClassList){
             x = wClassList[xi];
@@ -2757,6 +2761,10 @@ $(document).ready(function() {
             $(this).addClass('brook');
           }
           $(this).addClass('brook');
+          if(mking) {
+            $('#wa12').addClass('bking');
+            $('#wa14').removeClass('bking');
+          }
           $('.moveable').removeClass('moveable');
           others = true;
           bturn = false;
@@ -3487,8 +3495,18 @@ $(document).ready(function() {
         else {
           rerun_bRook = false;
         }
-        $(this).addClass('moveable2');$('.moveable2').on('click', function() {$('.moveable').off('click');$('.moveable').removeClass('moveable');others = true;$('.moveable2').off('click');$('.moveable2').removeClass('moveable2');run();});
-        $('.moveable').on('click', function() {$('.moveable2').off('click');$('.moveable2').removeClass('moveable2');
+        $(this).addClass('moveable2');
+        $('.moveable2').on('click', function() {
+          $('.moveable').off('click');
+          $('.moveable').removeClass('moveable');
+          others = true;
+          $('.moveable2').off('click');
+          $('.moveable2').removeClass('moveable2');
+          run();
+        });
+        $('.moveable').on('click', function() {
+          $('.moveable2').off('click');
+          $('.moveable2').removeClass('moveable2');
           $(this).off('click');
           $(b).removeClass('bking');
           $('.moveable').off('click');
@@ -4038,6 +4056,17 @@ $(document).ready(function() {
           i = this.id;
           a += i[2];
           a += i[3];
+          f = document.getElementsByClassName('wking')[0];
+          if(a == '83' && f.getAttribute('id') == 'ba84'){
+            mking = true;
+          }
+          else {
+            mking = false;
+          }
+          if(mking) {
+            $('#ba82').addClass('wking');
+            $('#ba84').removeClass('wking');
+          }
           for(xi in wClassList){
             x = bClassList[xi];
             $(this).removeClass(x);
